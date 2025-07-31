@@ -19,24 +19,7 @@ def read_light_sensor():
     # In a real setup, use an ADC library to read the LDR value
     return 300  # Simulate a light reading for testing (replace with actual ADC read)
 
-def control_bulb():
-    try:
-        while True:
-            light_level = read_light_sensor()
-            print(f"Light level: {light_level}")
 
-            if light_level < LIGHT_THRESHOLD:
-                GPIO.output(RELAY_PIN, GPIO.LOW)  # Turn bulb on (LOW activates relay)
-                print("Bulb ON")
-            else:
-                GPIO.output(RELAY_PIN, GPIO.HIGH)  # Turn bulb off
-                print("Bulb OFF")
-
-            time.sleep(1)  # Check every second
-
-    except KeyboardInterrupt:
-        print("Program terminated")
-    finally:
         GPIO.cleanup()  # Reset GPIO pins
 
 if __name__ == "__main__":
