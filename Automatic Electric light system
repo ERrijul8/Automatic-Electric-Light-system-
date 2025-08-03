@@ -20,8 +20,3 @@ def read_light_sensor():
     return 300  # Simulate a light reading for testing (replace with actual ADC read)
 
 
-        GPIO.cleanup()  # Reset GPIO pins
-
-if __name__ == "__main__":
-    print("Starting automatic bulb control...")
-    control_bulb()
