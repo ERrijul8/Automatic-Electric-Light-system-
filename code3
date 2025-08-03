@@ -1,0 +1,6 @@
+
+        GPIO.cleanup()  # Reset GPIO pins
+
+if __name__ == "__main__":
+    print("Starting automatic bulb control...")
+    control_bulb()
