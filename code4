@@ -1,0 +1,5 @@
+# Simulate ADC reading for LDR (replace with actual ADC library if needed, e.g., Adafruit_MCP3008)
+def read_light_sensor():
+    # Placeholder: Returns a value between 0 (dark) and 1023 (bright)
+    # In a real setup, use an ADC library to read the LDR value
+    return 300  # Simulate a light reading for testing (replace with actual ADC read)
