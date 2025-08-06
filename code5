@@ -1,0 +1,5 @@
+  // Burn an NFT (only token owner or approved)
+    function burn(uint256 tokenId) public {
+        require(_isApprovedOrOwner(msg.sender, tokenId), "Caller is not owner nor approved");
+        _burn(tokenId);
+    }
